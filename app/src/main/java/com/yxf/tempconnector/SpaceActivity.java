@@ -16,6 +16,7 @@ public class SpaceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_space);
+        //android 10.0以上设备必须要申请ACCESS_FINE_LOCATION权限才能使用蓝牙相关api
         rxPermissions
                 .request(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .subscribe(granted -> {
