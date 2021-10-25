@@ -105,8 +105,8 @@ public class DetailTempActivity extends AppCompatActivity {
 
         device= (DeviceBean) getIntent().getSerializableExtra("device");
         TempConnectorManager.getInstance(device)
-                .setConnectionType(ConnectionType.BROADCAST)//广播方式连接
-//                .setConnectionType(ConnectionType.BLUETOOTH)//蓝牙方式连接
+//                .setConnectionType(ConnectionType.BROADCAST)//广播方式连接
+                .setConnectionType(ConnectionType.BLUETOOTH)//蓝牙方式连接
                 .connect(connectStatusListener, dataLisener, true);
         btnDisconnect.setOnClickListener(v -> disConnect());
     }

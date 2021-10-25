@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 //连接体温贴
                 connect(deviceBean);
             }
-
         });
         scan();
     }
